@@ -1,0 +1,42 @@
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top:55px;
+    background-color: white;
+    width: 72px;
+}
+
+.sidebar-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*using those two we align the items horizontaly and verticaly
+    that for flex-direction: row; for flex-direction: column, they are switched*/
+    height: 74px;
+    flex-direction: column;
+    z-index: 200;
+    padding-top: 5px;
+    cursor: pointer;
+    /*makes it so that thee items be one on top of the other*/
+    /*the thing with the point in the beggining can be called a 
+    selector*/
+}
+
+.sidebar-link:hover{
+    background-color: rgb(235, 235, 235);
+    
+}
+
+.sidebar-link img{
+    height: 24px;
+    margin-bottom: 4px;
+    /*here we're combining selectors, it s going to target all the img elements inside
+    sidebar-link classes, as oposed to all images like what "sidebar-link, img" syntax would do */
+}
+
+.sidebar-link div{
+    font-size: 10px;
+}
+
+

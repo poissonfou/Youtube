@@ -1,0 +1,182 @@
+
+.thumbnail{
+    /* object-fit: contain; the image shrinks to 300. it creates a border around the image
+    in this case, object-position gets the values bottom and top*/
+    /* object-fit: cover; basically tells the image to cover the whole 300 area without losing its shape
+    it mit no fit inteirly << I'm fucking illiterate lmao>> on that area*/
+    /* object-position: ; defines what side we're gonna see*/
+    width: 100%;
+}
+
+.thumbnail:hover, .profile-picture:hover,
+.video-author:hover, .video-title:hover, .video-stats:hover{
+    cursor: pointer;
+}
+
+.video-title{
+    margin-top: 0;
+    font-weight: 550; /*font weight corresponds with a certain number. Regular is 400, medium is 500 and
+    bold is 700*/
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+
+.video-author,
+.video-stats{
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+
+}
+
+.video-author{
+    margin-bottom: 6px;
+}
+
+
+.channel-picture{
+    width: 50px;
+    vertical-align: top;
+    height: 40  px;
+}
+
+.video-info{
+    width: 200px;
+}
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture{
+    width: 36px;
+    border-radius: 50px;
+}
+
+.thumbnail-row{
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    /*
+    This is just an example of inheritance, if you set this, all the text inside video-grid
+    will become underlined, though that is not valid for every propriety, for instance, with border
+    that wouldn't work.
+    text-decoration: underline;
+    */
+    /*that can help us save some code, for instance:
+    font-family: Roboto, Arial; 
+    /*the font will be applied to every-text*/
+
+}
+
+/*Responsive Design, to have that we're creating a media query*/
+@media (max-width: 750px){
+    /*all the css inside of here will only active once the page is equal or
+    smaller than 600px*/ 
+    .video-grid{
+    grid-template-columns: 1fr 1fr;
+ }
+}
+ 
+@media (max-width: 751px) and (max-width:999px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 10001){
+    .video-title{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .video-author, .video-stats{
+        font-size: 14px;
+    }
+}
+
+.video-time{
+    font-size: 12px;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+    position: absolute;
+    /*
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    Instead of writing all of this, write just
+    */
+    padding: 4px;
+    /*you can also use with two values (the first for top and bottom and the second
+    for left and right or just four values as usual. With 4 values, the first one is 
+    top, the second right, the third bottom and the fourth left*/
+    border-radius: 2px;
+    bottom: 8px;
+    right: 5px;
+    /*The same thing can be done with the margin propriety*/
+}
+
+.tooltip-exercise{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+    white-space: nowrap;
+    border-radius: 8px;
+    padding: 10px 10px;
+    opacity: 0;
+    transition: 0.15s;
+    pointer-events: none;
+}
+
+.channel-picture:hover .tooltip-exercise{
+    opacity: 1;
+}
+
+.tooltip-exercise:hover{
+    opacity: 1;
+}
+
+.tooltip-picture{
+        width: 50px;
+        height: 50px;
+        border-radius: 35px; 
+}
+
+.tooltip-name{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.tooltip-subs{
+    color: gray;
+    font-size: 14px;
+    padding-right: 30px;
+    padding-top: 4px;
+}
+
+.tooltip-info{
+    padding-top: 6px;
+    margin-left: 10px;
+}
+
