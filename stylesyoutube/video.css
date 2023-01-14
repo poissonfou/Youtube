@@ -1,10 +1,5 @@
 
 .thumbnail{
-    /* object-fit: contain; the image shrinks to 300. it creates a border around the image
-    in this case, object-position gets the values bottom and top*/
-    /* object-fit: cover; basically tells the image to cover the whole 300 area without losing its shape
-    it mit no fit inteirly << I'm fucking illiterate lmao>> on that area*/
-    /* object-position: ; defines what side we're gonna see*/
     width: 100%;
 }
 
@@ -15,8 +10,7 @@
 
 .video-title{
     margin-top: 0;
-    font-weight: 550; /*font weight corresponds with a certain number. Regular is 400, medium is 500 and
-    bold is 700*/
+    font-weight: 550;
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 10px;
@@ -65,22 +59,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 40px;
-    /*
-    This is just an example of inheritance, if you set this, all the text inside video-grid
-    will become underlined, though that is not valid for every propriety, for instance, with border
-    that wouldn't work.
-    text-decoration: underline;
-    */
-    /*that can help us save some code, for instance:
-    font-family: Roboto, Arial; 
-    /*the font will be applied to every-text*/
-
 }
 
-/*Responsive Design, to have that we're creating a media query*/
-@media (max-width: 750px){
-    /*all the css inside of here will only active once the page is equal or
-    smaller than 600px*/ 
+@media (max-width: 750px){ 
     .video-grid{
     grid-template-columns: 1fr 1fr;
  }
@@ -116,21 +97,10 @@
     background-color: black;
     color: white;
     position: absolute;
-    /*
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    Instead of writing all of this, write just
-    */
     padding: 4px;
-    /*you can also use with two values (the first for top and bottom and the second
-    for left and right or just four values as usual. With 4 values, the first one is 
-    top, the second right, the third bottom and the fourth left*/
     border-radius: 2px;
     bottom: 8px;
     right: 5px;
-    /*The same thing can be done with the margin propriety*/
 }
 
 .tooltip-exercise{
